@@ -16,7 +16,8 @@ from src.utils import save_object
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join('artifacts', 'preprocessor.pkl')
-    
+
+
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config = DataTransformationConfig()
@@ -26,8 +27,8 @@ class DataTransformation:
         This method is responsible for data transformation
         '''
         try:
-            Num_Col = ['Hours Studied', 'Sleep Hours', 'Sample Question Papers Practiced', 'CGPA']
-            Cat_Col = ['Extracurricular Activities']
+            Num_Col = ['Hours_Studied', 'CGPA', 'Sleep_Hours', 'Sample_Question_Papers_Practiced']
+            Cat_Col = ['Extracurricular_Activities']
             
             Num_Pipeline = Pipeline(
                 steps=[
@@ -68,7 +69,7 @@ class DataTransformation:
             
             preprocessor_obj = self.get_data_transformer_object()
             
-            target_column_name = 'Performance Index'
+            target_column_name = 'Performance_Index'
             
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]
