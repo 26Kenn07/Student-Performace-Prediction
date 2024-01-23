@@ -2,6 +2,5 @@ pandas
 numpy
 seaborn
 imblearn
-catboost==1.0.1
 Flask
 -e .
