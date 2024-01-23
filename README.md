@@ -4,3 +4,5 @@ This repository is used to predict the Student Performance Index based on their 
 ![Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Y-Yz39PaCPDZGDvQvjUXU_Ylr_0ZPwpgZw&usqp=CAU)
 
 AWS Deployment
+
+WebApp: http://studentperformance.eu-north-1.elasticbeanstalk.com/predictdata
